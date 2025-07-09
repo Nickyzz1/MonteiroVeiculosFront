@@ -14,25 +14,37 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
+import car from '#/public/car.png'
+import { useEffect, } from "react";
+import { useWindowSize } from "@/hooks/window";
 
 export default function carousel() {
+  const { width, height } = useWindowSize();
   return (
     <>
-      <div className='z-0'>
+      <div className='w-screen max-w-screen overflow-hidden'>
           <Swiper
             cssMode={true}
             navigation={true}
             pagination={true}
             mousewheel={true}
             keyboard={true}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            height={800}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
             className="mySwiper"
           >
-            <SwiperSlide><Image src={banner1} alt='banner' height={200} /></SwiperSlide>
-            <SwiperSlide> <Image src={banner1} alt='banner' height={200} /></SwiperSlide>
-            <SwiperSlide> <Image src={banner1} alt='banner' height={200} /></SwiperSlide>
+            <SwiperSlide> <div className='relative w-screen '>
+              <Image  src={width? width > 500? banner1 : car : banner1} alt='banner' height={200} className='object-fill' />
+            </div></SwiperSlide>
+            <SwiperSlide> <div className='relative w-screen '>
+              <Image  src={width? width > 500? banner1 : car : banner1} alt='banner' height={200} className='object-fill' />
+            </div></SwiperSlide>
+            <SwiperSlide> <div className='relative w-screen '>
+              <Image  src={width? width > 500? banner1 : car : banner1} alt='banner' height={200} className='object-fill' />
+            </div></SwiperSlide>
           </Swiper>
       </div>
     </>
