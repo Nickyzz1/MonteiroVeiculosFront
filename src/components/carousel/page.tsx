@@ -20,7 +20,7 @@ import Image from 'next/image';
 export default function carousel() {
   return (
     <>
-      <div className='z-0 mt-1'>
+      <div className='z-0'>
           <Swiper
             cssMode={true}
             navigation={true}
