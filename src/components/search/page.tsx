@@ -12,14 +12,14 @@ const Search = () => {
                         <SearchIcon color='primary' />
                     </div>
                     <input
-                        className="outline-none w-full border-none bg-transparent placeholder:text-gray-400"
+                        className="outline-none text-black w-full border-none bg-transparent placeholder:text-gray-400"
                         type="text"
                         placeholder="Digite o modelo do veículo"
                     />
                 </div>
                 {width && width > 500 ? (
                 <Button className="w-40 h-10" variant="contained">
-                    <p>ver ofertas</p>
+                    <p className='text-white'>ver ofertas</p>
                 </Button>
                 ) : null}
             </div>

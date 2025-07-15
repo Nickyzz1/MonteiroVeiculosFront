@@ -1,4 +1,5 @@
 export enum ROUTES {
     login = "/login",
-    home = "/"
+    home = "/",
+    intoCategory = "/v1/category"
 }

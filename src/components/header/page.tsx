@@ -24,8 +24,8 @@ const Header = () => {
 
     return (
         <>
-            <div className="bg-white fixed top-0 left-0 w-full py-2 z-50 shadow-[1px_9px_4px_2px_rgba(0,_0,_0,_0.1)] px-2 md:px-4 flex items-center justify-between ">
-                <div onClick={() => router.push(ROUTES.home)} className={`flex gap-3 items-center`}>
+            <div className="bg-white fixed top-0 left-0 w-full py-1 z-50 shadow-[1px_9px_4px_2px_rgba(0,_0,_0,_0.1)] px-2 md:px-4 flex items-center justify-between ">
+                <div onClick={() => router.push(ROUTES.home)} className={`flex gap-3 items-center cursor-pointer`}>
                     <Image src={logo} alt="logo" className="w-10 h-10 md:w-15 md:h-15"></Image>
                     <div className="flex gap-1">
                         <h1 className="font-sans text-black font-bold md:text-md sm:text-sm  md:text-lg font-viga">Monteiro Veículos</h1>
@@ -33,10 +33,10 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="lg:flex items-center gap-6 hidden">
-                    <p className="text-black text-lg hover:text-blue-500 cursor-pointer">Home</p>
-                    <p className="text-black text-lg hover:text-blue-500 cursor-pointer">Comprar</p>
-                    <p className="text-black text-lg hover:text-blue-500 cursor-pointer">Vender</p>
-                    <p className="text-black text-lg hover:text-blue-500 cursor-pointer">Sobre nós</p>
+                    <p onClick={() => router.push(ROUTES.home)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Home</p>
+                    <p onClick={() => router.push(ROUTES.intoCategory)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Comprar</p>
+                    <p onClick={() => router.push(ROUTES.home)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Vender</p>
+                    <p onClick={() => router.push(ROUTES.home)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Sobre nós</p>
                     <div className="">
                         <Button
                             variant="contained"
