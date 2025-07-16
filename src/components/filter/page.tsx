@@ -10,7 +10,7 @@ const Filter = () => {
     const [brand, setBrand] = useState<string>('')
 
     return(
-        <div className="flex mt-5 flex-col w-full shadow-[0px_0px_9px_4px_rgba(0,_0,_0,_0.1)] bg-white rounded p-4 m-8 ">
+        <div className="flex mt-5 flex-col w-full max-w-screen shadow-[0px_0px_9px_4px_rgba(0,_0,_0,_0.1)] bg-white rounded p-4 md:mx-8 ">
             <div className='flex mb-4 w-full items-center justify-between'>
                 <h1 className='text-lg text-black'>Filtros aplicados</h1>
                 <IconButton><BackspaceIcon/></IconButton>

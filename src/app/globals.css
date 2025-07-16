@@ -39,6 +39,20 @@ body::-webkit-scrollbar {
   display: none;              
 }
 
+.p-carousel .p-carousel-prev {
+  left: -1rem;   /* afasta o botão da esquerda */
+}
+
+.p-carousel .p-carousel-next {
+  right: -1rem;  /* afasta o botão da direita */
+}
+
+
+.p-carousel .p-carousel-content {
+  padding-left: 1.0rem;
+  padding-right: 1.0rem;
+}
+
 
 @keyframes gradient-flow {
   0% {

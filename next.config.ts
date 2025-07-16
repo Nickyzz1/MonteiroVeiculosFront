@@ -11,6 +11,9 @@ const nextConfig = {
         {
           source: '/v1/category',
           destination: '/intoCategory'
+        }, {
+          source : '/v1/car',
+          destination: '/intoCar'
         }
       ]
   },
