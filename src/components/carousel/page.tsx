@@ -3,12 +3,9 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import banner1 from '#/public/banner1.png'
 import banner31 from '#/public/banner31.png'
-import banner4 from '#/public/banner4.png'
 import banner5 from '#/public/banner5.png'
 import banner6 from '#/public/banner6.png'
-import banner7 from '#/public/banner7.png'
 import banner8 from '#/public/banner8.png'
 
 // Import Swiper styles
@@ -20,12 +17,20 @@ import './styles.css';
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
-import Image from 'next/image';
-import car from '#/public/car.png'
-import { useEffect, } from "react";
+import Image, { StaticImageData } from 'next/image';
 import { useWindowSize } from "@/hooks/window";
 
-export default function carousel() {
+// interface IImg {
+//   imgLarge : string[],
+//   imgSmall : string[]
+// }
+
+interface IImg {
+  imgLarge: StaticImageData[];
+  imgSmall: StaticImageData[];
+}
+
+export default function BannerCarousel( { imgLarge, imgSmall } :IImg) {
   const { width, height } = useWindowSize();
   return (
     <>
@@ -41,21 +46,16 @@ export default function carousel() {
             modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
             className="mySwiper"
           >
-            
-            <SwiperSlide> <div className='relative w-screen '>
-              <Image  src={width? width > 500? banner31 : car : banner31} alt='banner' className='object-fit' />
-            </div></SwiperSlide>
-           
-            <SwiperSlide> <div className='relative w-screen '>
-              <Image  src={width? width > 500? banner5 : car : banner5} alt='banner' className='object-fill' />
-            </div></SwiperSlide>
-            <SwiperSlide> <div className='relative w-screen '>
-              <Image  src={width? width > 500? banner6 : car : banner6} alt='banner' className='object-fill' />
-            </div></SwiperSlide>
-          
-            <SwiperSlide> <div className='relative w-screen '>
-              <Image  src={width? width > 500? banner8 : car : banner8} alt='banner' className='object-fill' />
-            </div></SwiperSlide>
+            {width && (
+              (width > 500 ? imgLarge : imgSmall).map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative w-screen h-[300px] md:h-[600px]">
+                    <Image src={item} alt="banner" className="object-cover"  fill />
+                  </div>
+                </SwiperSlide>
+              ))
+            )}
+
           </Swiper>
       </div>
     </>

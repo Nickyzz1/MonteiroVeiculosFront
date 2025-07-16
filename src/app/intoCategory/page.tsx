@@ -36,7 +36,7 @@ const IntoCategory = () => {
     <>
       <Header />
       <GoBack />
-      <div className="bg-[#E7E8EC] flex min-h-screen w-full">
+      <div className="bg-[#E7E8EC] flex min-h-screen w-full pb-12">
         {/* Filtro lateral - visível só em md pra cima */}
         <div className="hidden md:block w-1/4 px-4">
           <Filter />
