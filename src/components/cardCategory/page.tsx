@@ -8,7 +8,7 @@ import { ROUTES } from "@/constantes/routes.";
 const CardCategory = () => {
     const router = useRouter()
     return (
-        <div onClick={() => router.push(ROUTES.intoCategory)} className="relative cursor-pointer sm:h-[240px] sm:w-[240px] md-h-[180px]  xl:h-[300px] xl:w-[300px] rounded-3xl overflow-hidden group">
+        <div onClick={() => router.push(ROUTES.intoCategory)} className="relative cursor-pointer w-[240px] h-[240px] sm:h-[240px] sm:w-[240px] md:h-[180px] md:w-[180px] rounded-3xl overflow-hidden group">
             <Image
                 src={car1}
                 alt="categoria carros elétricos"

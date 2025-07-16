@@ -49,7 +49,7 @@ export default function BannerCarousel( { imgLarge, imgSmall } :IImg) {
             {width && (
               (width > 500 ? imgLarge : imgSmall).map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-screen h-[300px] md:h-[600px]">
+                  <div className="relative w-screen h-[300px] md:h-[400px] min-h-[300px] md:min-h-[400px]">
                     <Image src={item} alt="banner" className="object-cover"  fill />
                   </div>
                 </SwiperSlide>

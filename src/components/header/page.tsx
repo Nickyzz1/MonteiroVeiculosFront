@@ -36,7 +36,7 @@ const Header = () => {
                     <p onClick={() => router.push(ROUTES.home)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Home</p>
                     <p onClick={() => router.push(ROUTES.intoCategory)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Comprar</p>
                     <p onClick={() => router.push(ROUTES.sale)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Vender</p>
-                    <p onClick={() => router.push(ROUTES.home)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Sobre nós</p>
+                    <p onClick={() => router.push(ROUTES.aboutUs)} className="text-black text-lg hover:text-blue-500 cursor-pointer">Sobre nós</p>
                     <div className="">
                         <Button
                             variant="contained"
