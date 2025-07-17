@@ -4,5 +4,6 @@ export enum ROUTES {
     intoCar = "/v1/car",
     sale = '/v1/sale',
     aboutUs = '/v1/aboutUs',
-    login = '/v1/auth'
+    login = '/v1/auth',
+    homeAdmin = '/v1/home/administrador'
 }

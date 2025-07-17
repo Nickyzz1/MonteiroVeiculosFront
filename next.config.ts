@@ -27,6 +27,10 @@ const nextConfig = {
         {
           source: '/v1/auth',
           destination: '/login'
+        },
+        {
+          source: '/v1/home/administrador',
+          destination: '/homeAdmin'
         }
       ]
   },
