@@ -23,6 +23,10 @@ const nextConfig = {
         {
           source: '/v1/aboutUs',
           destination: '/aboutUs'
+        },
+        {
+          source: '/v1/auth',
+          destination: '/login'
         }
       ]
   },
